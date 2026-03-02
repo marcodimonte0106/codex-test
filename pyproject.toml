@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "market-radar"
+version = "0.1.0"
+description = "Global market news radar using GDELT + RSS"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31.0",
+  "feedparser>=6.0.11",
+  "rapidfuzz>=3.9.0",
+  "numpy>=1.26.0",
+  "scikit-learn>=1.4.0",
+  "sentence-transformers>=3.0.0",
+  "hdbscan>=0.8.33",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
